@@ -1,6 +1,32 @@
 # Java Exercise
 
-This is a simple exercise to allow you to demostrate your software engineering skillset. It's completly up to you how long you give yourself, stop when you're happy with the quality of your work, but we don't expect it to take too long.
+This is a simple java 8 exercise demonstrating some of the clean code, test and SOLID principles. The application uses the Spock 
+testing framework to demonstrate which is excellent for data driven testing and where the requirement specification can easily tested.
+
+For example the following specification has been lifted straight from here:
+
+|shoppingDate | apples | soup | bread | milk | total
+|:---         |  : ---:|: ---:|: ---  |: ---:|: ---: 
+|today        | 0      | 3    | 2     | 0    | 3.15
+|today        | 6      | 0    | 0     | 1    | 1.90
+|today + 5    | 6      | 0    | 0     | 1    | 1.84
+|today + 5    | 3      | 2    | 1     | 0    | 1.97
+|today        | 0      | 0    | 0     | 0    | 0.00
+
+
+## Running Tests
+To run tests:
+
+```mvn clean test ```
+
+## Running the Application
+To run the application:
+
+```mvn clean compile exec:java```
+
+Follow the instructions as printed to the command line.
+
+
 
 ## Instructions
   1. Please fork this repository and work on your fork.
