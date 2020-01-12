@@ -1,3 +1,5 @@
 /java-test.iml
 /.idea/
 /target/
+
+**/**/.DS_Store
