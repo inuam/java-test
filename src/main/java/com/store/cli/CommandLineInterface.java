@@ -46,7 +46,7 @@ public class CommandLineInterface {
 
         int ch;
         while (true) {
-            System.out.println("Welcome to Henry's store.\nMenu: \n " +
+            System.out.println("Welcome to Henry's store.\n Please select item in sequence to start shopping: \n " +
                     "0) Start Shopping for a date \n " +
                     "1) Add product to basket \n " +
                     "2) Print receipt \n " +

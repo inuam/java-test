@@ -24,7 +24,12 @@ To run the application:
 
 ```mvn clean compile exec:java```
 
-Follow the instructions as printed to the command line.
+Once the the application starts the console will display a selection of to choose from.
+Please start with selecting the shopping date which starts the process and creates a shopping basket.
+Then select 1  for as many products you'd like to add to your basket.
+Select 2 to checkout and display the sub-total, discount and grand total.
+From here you can choose re-start the process by selecting 0 or select 1 and keeping adding products to the same basket.
+Select 3 to exit. 
 
 
 
