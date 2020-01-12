@@ -7,7 +7,7 @@ import static com.store.model.Unit.TIN
 import static java.math.BigDecimal.valueOf
 import static java.util.Arrays.asList
 
-class SimpleProductRepoTest extends Specification {
+class SimpleProductRepoSpec extends Specification {
 
     def expectedSoup = new Product(1l, "SOUP", TIN, valueOf(0.65))
     def productRepository = new SimpleProductRepo(asList(expectedSoup))

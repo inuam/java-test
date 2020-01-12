@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 import static com.store.model.Unit.LOAF
 
-class ProductTest extends Specification {
+class ProductSpec extends Specification {
     def "should print product description"() {
         given:
         def aProduct = new Product(1, "Bread", LOAF, BigDecimal.valueOf(0.8))
