@@ -5,14 +5,14 @@ testing framework to demonstrate which is excellent for data driven testing and 
 
 For example the following specification has been lifted straight from here:
 
-|shoppingDate | apples | soup | bread | milk | total
-|:---         |  : ---:|: ---:|: ---  |: ---:|: ---: 
-|today        | 0      | 3    | 2     | 0    | 3.15
-|today        | 6      | 0    | 0     | 1    | 1.90
-|today + 5    | 6      | 0    | 0     | 1    | 1.84
-|today + 5    | 3      | 2    | 1     | 0    | 1.97
-|today        | 0      | 0    | 0     | 0    | 0.00
-
+|**shoppingDate** | **apples** | **soup** | **bread** | **milk** | **total**    |
+|:---             |  :---:     |  :---:   |   :---:   |  :---:   |  :---:       |
+|today            | 0          | 3        | 2         | 0        | 3.15         |
+|today            | 6          | 0        | 0         | 1        | 1.90         |
+|today + 5        | 6          | 0        | 0         | 1        | 1.84         |
+|today + 5        | 3          | 2        | 1         | 0        | 1.97         |
+|today            | 0          | 0        | 0         | 0        | 0.00         |
+        
 
 ## Running Tests
 To run tests:
