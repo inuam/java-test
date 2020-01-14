@@ -29,6 +29,21 @@ class DiscountCheckoutSpec extends Specification {
         thrown(AssertionError)
     }
 
+     def "should apply zero discount when no offers to apply"() {
+         given:
+         def checkout = new DiscountCheckout(null)
+
+         expect:
+         def basket = addToShoppingBasket(shoppingDate, apples, soup, bread, milk)
+
+         checkout.apply(basket) == total
+
+         where:
+         shoppingDate      | apples | soup | bread | milk || total
+         today             | 0      | 0    | 2     | 0    || 1.60
+         today             | 0      | 0    | 0     | 0    || 0.00
+     }
+
     @Unroll
     def "should apply all offers to shopping basket"() {
         setup:
