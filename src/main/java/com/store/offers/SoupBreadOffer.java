@@ -35,7 +35,7 @@ public class SoupBreadOffer implements Offer {
             return ZERO;
         }
 
-        BigDecimal breadPrice =products.stream()
+        BigDecimal breadPrice = products.stream()
                 .filter(product -> product.getName().equals("BREAD"))
                 .findFirst()
                 .get()

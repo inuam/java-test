@@ -26,7 +26,7 @@ class DiscountCheckoutSpec extends Specification {
         checkout.apply(null) == BigDecimal.ZERO
 
         then:
-        thrown(AssertionError)
+        thrown AssertionError
     }
 
      def "should apply zero discount when no offers to apply"() {
@@ -40,8 +40,8 @@ class DiscountCheckoutSpec extends Specification {
 
          where:
          shoppingDate      | apples | soup | bread | milk || total
-         today             | 0      | 0    | 2     | 0    || 1.60
-         today             | 0      | 0    | 0     | 0    || 0.00
+         today             | 0      | 2    | 1     | 0    || 2.10
+         today             | 2      | 0    | 0     | 0    || 0.20
      }
 
     @Unroll
@@ -60,9 +60,11 @@ class DiscountCheckoutSpec extends Specification {
         where:
         shoppingDate      | apples | soup | bread | milk || total
         today             | 0      | 3    | 2     | 0    || 3.15
+        today             | 0      | 3    | 2     | 0    || 3.15
         today             | 6      | 0    | 0     | 1    || 1.90
         today.plusDays(5) | 6      | 0    | 0     | 1    || 1.84
         today.plusDays(5) | 3      | 2    | 1     | 0    || 1.97
+        today.plusDays(60)| 2      | 2    | 2     | 2    || 5.70
         today             | 0      | 0    | 0     | 0    || 0.00
     }
 

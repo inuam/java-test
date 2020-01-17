@@ -11,6 +11,7 @@ For example the following specification has been lifted straight from here:
 |today            | 6          | 0        | 0         | 1        | 1.90         |
 |today + 5        | 6          | 0        | 0         | 1        | 1.84         |
 |today + 5        | 3          | 2        | 1         | 0        | 1.97         |
+|today + 60       | 2          | 2        | 2         | 2        | 5.70         |
 |today            | 0          | 0        | 0         | 0        | 0.00         |
         
 
@@ -24,7 +25,7 @@ To run the application:
 
 ```mvn clean compile exec:java```
 
-Once the the application starts the console will display a selection of to choose from.
+Once the the application starts the console will display a selection (0..3) to choose from.
 Please start with selecting the shopping date which starts the process and creates a shopping basket.
 Then select 1  for as many products you'd like to add to your basket.
 Select 2 to checkout and display the sub-total, discount and grand total.
