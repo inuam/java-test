@@ -1,7 +1,7 @@
 # Java Exercise
 
-This is a simple java 8 exercise demonstrating some of the clean code, test and SOLID principles. The application uses the Spock 
-testing framework to demonstrate which is excellent for data driven testing and where the requirement specification can easily tested.
+This is a simple java 8 shopping basket exercise, demonstrating some of the SOLID principles while keeping code and test clean. The application uses the Spock 
+testing framework to demonstrate data driven testing where the requirement specification can easily tested.
 
 For example the following specification has been lifted straight from here:
 
@@ -27,8 +27,8 @@ To run the application:
 
 Once the the application starts the console will display a selection (0..3) to choose from.
 Please start with selecting the shopping date which starts the process and creates a shopping basket.
-Then select 1  for as many products you'd like to add to your basket.
-Select 2 to checkout and display the sub-total, discount and grand total.
+Then select 1 for as many products you'd like to add to your basket.
+Select 2 to checkout and display the sub-total, discount if any applicable offers were applied and grand total.
 From here you can choose re-start the process by selecting 0 or select 1 and keeping adding products to the same basket.
 Select 3 to exit. 
 
