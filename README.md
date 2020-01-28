@@ -1,6 +1,6 @@
 # Java Exercise
 
-This is a simple java 8 shopping basket exercise, demonstrating some of the SOLID principles while keeping code and test clean. The application uses the Spock 
+This is a simple java 8 shopping basket exercise using the Spock 
 testing framework to demonstrate data driven testing where the requirement specification can easily tested.
 
 For example the following specification has been lifted straight from here:
