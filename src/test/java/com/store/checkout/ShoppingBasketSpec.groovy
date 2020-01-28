@@ -11,8 +11,8 @@ class ShoppingBasketSpec extends Specification {
     def "should create a shopping basket"() {
         when:
         def basket = new ShoppingBasket(parse("2020-01-01"))
-        basket.addProduct(new Product(11, "APPLES", SINGLE, 0.10));
-        basket.addProduct(new Product(22, "SOUP", TIN, 0.65));
+        basket.addProduct(new Product(11, "APPLES", SINGLE, 0.10))
+        basket.addProduct(new Product(22, "SOUP", TIN, 0.65))
 
         then:
         basket.getTotal() == 0.75

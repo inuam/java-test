@@ -8,6 +8,7 @@ import com.store.model.Unit;
 import com.store.offers.AppleOffer;
 import com.store.offers.Offer;
 import com.store.offers.SoupBreadOffer;
+import com.store.repos.ProductRepository;
 import com.store.repos.SimpleProductRepo;
 
 import java.time.LocalDate;
@@ -23,25 +24,32 @@ import static java.util.Arrays.asList;
 
 public class CommandLineInterface {
 
-    private SimpleProductRepo productRepo;
-    ShoppingBasket shoppingBasket = null;
 
     public static void main(String[] args) {
-        new CommandLineInterface().start();
-    }
-
-    private void start() {
         List<Product> products = new ArrayList<>();
         products.add(new Product(11L, "APPLE", Unit.SINGLE, valueOf(0.10)));
         products.add(new Product(22L, "SOUP", Unit.TIN, valueOf(0.65)));
         products.add(new Product(33L, "BREAD", Unit.LOAF, valueOf(0.80)));
         products.add(new Product(44L, "MILK", Unit.BOTTLE, valueOf(1.3)));
-        productRepo = new SimpleProductRepo(products);
+        SimpleProductRepo productRepo = new SimpleProductRepo(products);
 
         Offer soupBreadOffer = new SoupBreadOffer(now().minusDays(1), now().plusDays(7));
         Offer appleOffer = new AppleOffer(now().plusDays(3), now().plusMonths(1).with(lastDayOfMonth()));
         DiscountCheckout discountCheckout = new DiscountCheckout(asList(appleOffer, soupBreadOffer));
 
+        new CommandLineInterface(productRepo, discountCheckout).start();
+    }
+
+    private final ProductRepository productRepo;
+    private final DiscountCheckout discountCheckout;
+    private ShoppingBasket shoppingBasket;
+
+    public CommandLineInterface(ProductRepository productRepo, DiscountCheckout discountCheckout) {
+        this.productRepo = productRepo;
+        this.discountCheckout = discountCheckout;
+    }
+
+    private void start() {
         Scanner sc = new Scanner(System.in);
 
         int ch;

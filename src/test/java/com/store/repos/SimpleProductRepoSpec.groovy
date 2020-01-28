@@ -20,21 +20,13 @@ class SimpleProductRepoSpec extends Specification {
         optionalProduct.get() == expectedSoup
     }
 
-    def "should find product by id"() {
-        when:
-        def optionalProduct = productRepository.getProduct(1L)
+     def "should return empty optional when product not found"() {
+         when:
+         def optionalProduct = productRepository.getProductByName("UNKNOWN")
 
-        then:
-        optionalProduct.get() == expectedSoup
-    }
-
-    def "should return all products from repo"() {
-        when:
-        def products = productRepository.findAll()
-
-        then:
-        products == [expectedSoup]
-    }
+         then:
+         optionalProduct == Optional.empty()
+     }
 
     void givenRepoWithProduct(Product product) {
         productRepository = new SimpleProductRepo(asList(product))
